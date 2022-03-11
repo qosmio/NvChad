@@ -19,7 +19,7 @@ local plugins = {
    },
 
    {
-      "NvChad/nvim-base16.lua",
+      "qosmio/nvim-base16.lua",
       after = "packer.nvim",
       config = function()
          require("colors").init()
