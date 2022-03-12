@@ -11,7 +11,7 @@ local plugins = {
    { "NvChad/extensions" },
    { "nvim-lua/plenary.nvim" },
    { "lewis6991/impatient.nvim" },
-   { "nathom/filetype.nvim" },
+   { "qosmio/filetype.nvim" },
 
    {
       "wbthomason/packer.nvim",
@@ -19,7 +19,7 @@ local plugins = {
    },
 
    {
-      "NvChad/nvim-base16.lua",
+      "qosmio/nvim-base16.lua",
       after = "packer.nvim",
       config = function()
          require("colors").init()
