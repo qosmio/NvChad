@@ -7,8 +7,7 @@ M.close_buffer = function(force)
       cmd ":bd!"
    else
       -- switch to previous buffer then close current buffer
-      local killBuf = ":bp | bd" .. vim.fn.bufnr()
-      vim.cmd(killBuf)
+      vim.cmd(":bp | bd" .. vim.fn.bufnr())
    end
 end
 
