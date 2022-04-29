@@ -3,10 +3,12 @@ local M = {}
 local cmd = vim.cmd
 
 M.close_buffer = function(force)
-   if force or not vim.bo.buflisted or vim.bo.buftype == 'nofile' then
+   if force or not vim.bo.buflisted or vim.bo.buftype == "nofile" then
       cmd ":bd!"
    else
-      cmd "bd"
+      -- switch to previous buffer then close current buffer
+      local killBuf = ":bp | bd" .. vim.fn.bufnr()
+      vim.cmd(killBuf)
    end
 end
 
@@ -96,7 +98,9 @@ end
 M.remove_default_plugins = function(plugins)
    local removals = require("core.utils").load_config().plugins.remove or {}
    if not vim.tbl_isempty(removals) then
-      for _, plugin in pairs(removals) do plugins[plugin] = nil end
+      for _, plugin in pairs(removals) do
+         plugins[plugin] = nil
+      end
    end
    return plugins
 end
