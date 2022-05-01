@@ -10,7 +10,7 @@ function M.on_attach(client, bufnr)
    client.server_capabilities.documentFormattingProvider = false
    client.server_capabilities.documentRangeFormattingProvider = false
 
-   require("core.mappings").lspconfig(bufnr)
+   require("core.mappings").lspconfig()
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
