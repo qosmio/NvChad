@@ -15,7 +15,7 @@ local plugins = {
 
    ["NvChad/extensions"] = {},
 
-   ["qosmio/nvim-base16.lua"] = {
+   ["NvChad/nvim-base16.lua"] = {
       after = "packer.nvim",
       config = function()
          local ok, base16 = pcall(require, "base16")
