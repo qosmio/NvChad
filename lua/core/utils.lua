@@ -64,6 +64,8 @@ nvchad.remove_disabled_mappings = function(key_map)
       for k, v in pairs(key_map) do
          if v ~= nil and v ~= "" then clean_map[k] = v end
       end
+   else
+      return key_map
    end
    return clean_map
 end
