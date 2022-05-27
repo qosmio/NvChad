@@ -186,7 +186,7 @@ local plugins = {
 
    -- file managing , picker etc
    ["kyazdani42/nvim-tree.lua"] = {
-      ft = 'alpha',
+      ft = "alpha",
       cmd = { "NvimTreeToggle", "NvimTreeFocus" },
       config = function()
          require "plugins.configs.nvimtree"
@@ -206,7 +206,7 @@ local plugins = {
          nvchad.packer_lazy_load "which-key.nvim"
       end,
       config = function()
-         require "plugins.configs.whichkey"
+         require("plugins.configs.whichkey").setup()
       end,
    },
 }

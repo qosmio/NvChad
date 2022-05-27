@@ -102,6 +102,9 @@ M.comment = {
 M.lspconfig = {
    -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
+   -- define all paths from which these maps should not be applied through the mapping function
+   ignore = { "/lua/custom/init.lua", "/lua/plugins/configs/whichkey.lua" },
+
    n = {
       ["gD"] = {
          function()
