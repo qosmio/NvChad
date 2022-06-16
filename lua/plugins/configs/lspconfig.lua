@@ -11,7 +11,7 @@ local utils = require "core.utils"
 
 require "ui.lsp"
 
-function M.on_attach(client, _)
+M.on_attach = function(client, bufnr)
    client.server_capabilities.documentFormattingProvider = false
    client.server_capabilities.documentRangeFormattingProvider = false
 
