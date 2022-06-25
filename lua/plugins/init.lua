@@ -168,6 +168,7 @@ local plugins = {
    },
 
    ["nvim-telescope/telescope.nvim"] = {
+      module = { "telescope", "telescope.builtin" },
       cmd = "Telescope",
       config = function()
          require "plugins.configs.telescope"
