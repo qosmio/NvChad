@@ -39,7 +39,7 @@ autocmd("BufEnter", {
 vim.t.bufs = vim.api.nvim_list_bufs()
 
 -- thx to https://github.com/ii14 & stores buffer per tab -> table
-autocmd({ "BufAdd" }, {
+autocmd("BufAdd", {
    callback = function(args)
       if vim.t.bufs == nil then
          vim.t.bufs = { args.buf }
