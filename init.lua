@@ -2,9 +2,6 @@ require "core"
 require "core.options"
 
 require("core.utils").load_mappings()
-
--- setup packer + plugins
-require("core.packer").bootstrap()
-require "plugins"
+require("core.packer").bootstrap() -- bootstrap packer & load plugins
 
 pcall(require, "custom")
