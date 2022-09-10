@@ -23,7 +23,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.api.nvim_create_autocmd("User", {
     pattern = "PackerComplete",
     callback = function()
+<<<<<<< HEAD
       vim.cmd "bw | MasonInstallAll" -- close packer window
+=======
+      vim.cmd "bw | silent! MasonInstallAll" -- close packer window
+>>>>>>> 8a18f89b03b0aaf013c8832024687f6e981e7576
       require("packer").loader "nvim-treesitter"
     end,
   })
